@@ -3,9 +3,85 @@
     <head>
         <meta charset="UTF-8">
         <title>[WIP]ホームページ</title>
+
+        <!-- うおおおおおおおおおおおおおおお -->
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
+        <link rel="preload" href="https://jsdelivr.net" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://jsdelivr.net" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://jsdelivr.net" as="font" type="font/woff2" crossorigin>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+        
+
+
     </head>
     <body>
-        <h1>ホームページ</h1>
-        <p>13±1歳です</p>
+        <div>
+            <h1>ホームページ</h1>
+            <div>
+                <h2>ようこそ</h2>
+                <p>このサイトには私に関する
+                <br>いろいろなことが載っていますよ</p>
+            </div>
+            <img src="imgs/icon.png" alt="icon.png">
+            <p>アイコン</p>
+            <div>
+                <h2>プロフィール</h2>
+                <p>13±1歳学生</p>
+                <p>AIが嫌い</p>
+                <p>Scratch,Python,C#が使えます</p>
+                <p>詳細は以下</p>
+            </div>
+            
+        </div>
+
+        <div>
+            <h1>好きなもの・こと</h1>
+            <div>
+                <h2>好きな数式</h2>
+                <p>τ論者です。</p>
+                <p>$$ \tau=\frac{C}{r}$$</p>
+                <p>$$ F(t)=\frac{1}{\sqrt{\tau}}\int_{-\infty}^{\infty}f(x)e^{-itx}dx $$</p>
+            </div>
+            <div>
+                <h2>プログラミング</h2>
+                <p>Python</p>
+                <pre><code class="language-python">
+a = int(input())
+print(str(a+5))
+                </code></pre>
+                <p>関数名すら動的に変えられる柔軟さと
+                <br>シンプルさが大好き</p>
+                <p>C#</p>
+                <pre><code class="language-cs">
+string a = "programming"
+Console.WriteLine(a[..3])
+                </code></pre>
+                <p>工夫すればすごく高速にプログラムを動かせる<br>ポテンシャル</p>
+                <p>Scratch</p>
+                <a href="https://scratch.mit.edu/users/my_hokanko/">私のアカウント</a>
+                <p>縛りプレイを楽しむのに近い
+                <br>本来Scratchで作るべきではない物を作ったりするのが<br>楽しい</p>
+            </div>
+            <div>
+                <h2>ゲーム</h2>
+                <p>私が好きなゲーム四選</p>
+                <iframe src="https://store.steampowered.com/widget/420530" frameborder="0"  width="400" height="190"></iframe>
+                <iframe src="https://store.steampowered.com/widget/1092790" frameborder="0"  width="400" height="190"></iframe>
+                <iframe src="https://store.steampowered.com/widget/736260" frameborder="0"  width="400" height="190"></iframe>
+                <iframe src="https://store.steampowered.com/widget/220200" frameborder="0"  width="400" height="190"></iframe>
+            </div>
+        </div>
+        
     </body>
 </html>

@@ -1,8 +1,81 @@
+/* https://colorhunt.co/palette/7c93c355679c1e2a5ee1d7b7 */
+
+:root {
+  --first: #7C93C3;
+  --second: #55679C;
+  --third: #1E2A5E;
+  --fourth: #E1D7B7;
+  --text: white;
+}
+
 div{
     text-align: center;
+    border: 5px solid var(--fourth);
+    background-color: var(--second);
+    border-radius: 20px;
     
+    justify-content: center;
+    align-items: center; 
+    padding-left: 80px;  
+    padding-right: 80px;
+    
+
+    display: flex;
+    max-width:600px;
+    margin: auto;
+    margin-bottom: 30px;
+    flex-direction: column; 
 }
 
 body{
-    background-color: black;
+    background-color: var(--first);
+}
+
+h1{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text);
+
+    background-color: var(--third);
+    width: fit-content;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+h2{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text);
+
+    background-color: var(--third);
+    width: fit-content;
+    margin: 10px auto;
+    padding: 2px;
+    border-radius: 5px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+img{
+    text-align: center;
+    width: 50%;
+    margin: 0px;
+    object-fit: cover;
+    border-radius: 20px
+}
+
+a{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--fourth);
+    margin-bottom: 20px;
+}
+
+p{
+    color: var(--text);
 }
