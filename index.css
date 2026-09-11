@@ -1,10 +1,11 @@
-/* https://colorhunt.co/palette/7c93c355679c1e2a5ee1d7b7 */
+
 
 :root {
   --first: #7C93C3;
   --second: #55679C;
   --third: #1E2A5E;
   --fourth: #E1D7B7;
+  --h: white;
   --text: white;
 }
 
@@ -25,6 +26,8 @@ div{
     margin: auto;
     margin-bottom: 30px;
     flex-direction: column; 
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
 }
 
 body{
@@ -35,7 +38,7 @@ h1{
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: var(--text);
+    color: var(--h);
 
     background-color: var(--third);
     width: fit-content;
@@ -50,12 +53,12 @@ h2{
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: var(--text);
+    color: var(--h);
 
     background-color: var(--third);
     width: fit-content;
     margin: 10px auto;
-    padding: 2px;
+    padding: 10px;
     border-radius: 5px;
     text-align: center;
     white-space: nowrap;
@@ -72,10 +75,26 @@ img{
 a{
     padding: 5px;
     border-radius: 5px;
-    background-color: var(--fourth);
+    background-color: var(--first);
     margin-bottom: 20px;
+    color: var(--text);
 }
 
 p{
     color: var(--text);
+    font-family: "Zen Maru Gothic", sans-serif;
+}
+
+button{
+    aspect-ratio: 1;
+    background-color: var(--second);
+    border-radius: 50px;
+    color: var(--text);
+}
+
+.change-theme {
+  position: fixed;   
+  right: 20px;       
+  bottom: 20px;      
+  z-index: 9999;    
 }
