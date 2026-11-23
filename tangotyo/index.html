@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>単語ちょー</title>
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="main-container">
+    <h1>単語ちょー</h1>
+    <p>文字を押して編集してね</p>
+
+    <div class="top-controls">
+      <input type="text" id="searchInput" placeholder="検索">
+      <div class="global-actions">
+        <button type="button" id="addRootFolderBtn">＋フォルダ</button>
+        <button type="button" id="exportCsvBtn">CSV保存</button>
+        <button type="button" id="importCsvBtn">CSV読込</button>
+      </div>
+    </div>
+
+    <table id="rootWordTable">
+      <thead>
+        <tr>
+          <th>ことば</th>
+          <th>よみ</th>
+          <th>備考</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="rootWordTableBody" class="word-table-body">
+        <tr class="add-word-row">
+          <td colspan="4">
+            <button type="button" id="addRootWordBtn" class="add-word-btn">追加＋</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div id="folderTreeContainer"></div>
+  </div>
+
+  <input type="file" id="importCsvInput" accept=".csv" style="display: none;">
+
+
+  <template id="folderTemplate">
+    <div class="folder-block">
+      <div class="folder-header">
+        <button type="button" class="folder-toggle-btn">
+          <span class="folder-arrow">▶</span>
+          <span class="folder-title"></span>
+        </button>
+        <div class="folder-actions">
+          <select class="move-folder-select" title="フォルダ移動"></select>
+          <button type="button" class="add-subfolder-btn" title="フォルダ作成">＋</button>
+          <button type="button" class="rename-folder-btn" title="名前変更">✎</button>
+          <button type="button" class="dissolve-folder-btn" title="フォルダ解散">📤</button>
+          <button type="button" class="delete-folder-btn" title="フォルダ削除">🗑</button>
+        </div>
+      </div>
+
+      <div class="folder-content">
+        <table>
+          <thead>
+            <tr>
+              <th>ことば</th>
+              <th>よみ</th>
+              <th>備考</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody class="word-table-body">
+            <tr class="add-word-row">
+              <td colspan="4">
+                <button type="button" class="add-word-btn">追加＋</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="subfolders-container"></div>
+      </div>
+    </div>
+  </template>
+
+  <template id="rowTemplate">
+    <tr class="word-row">
+      <td class="editable-cell kotoba">
+        <textarea class="js-auto-resize deka" placeholder="ことば"></textarea>
+        <div class="text-display deka-text"></div>
+      </td>
+      <td class="editable-cell yomi">
+        <textarea class="js-auto-resize yomi" placeholder="よみ"></textarea>
+        <div class="text-display yomi-text"></div>
+      </td>
+      <td class="editable-cell imi">
+        <textarea class="js-auto-resize" placeholder="備考"></textarea>
+        <div class="text-display imi-text"></div>
+      </td>
+      <td class="word-action-cell sousa">
+        <select class="move-word-select" title="単語を別のフォルダへ移動"></select>
+        <button type="button" class="round-button" title="単語を削除">✕</button>
+      </td>
+    </tr>
+  </template>
+
+  <script src="index.js"></script>
+</body>
+</html>
