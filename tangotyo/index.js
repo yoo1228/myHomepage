@@ -361,7 +361,7 @@ function renderFolderNode(folderObj, parentArray, parentFolderObj, container) {
   });
 
   renameBtn.addEventListener("click", () => {
-    const newName = prompt("新しいフォルダ名を入力してくだｓあい", folderObj.name);
+    const newName = prompt("新しいフォルダ名を入力してください", folderObj.name);
     if (!newName || newName.trim() === "") return;
     folderObj.name = newName.trim();
     saveData();
